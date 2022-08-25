@@ -1,13 +1,180 @@
-body {
+*, *::before, *::after{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  background: #232238;
+}
+
+.container{
+  width: 25%;
+  height: 80vh;
+  margin:5% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 2rem;
+}
+
+.todo-app{
+  width: 90%;
+  height: 90%;
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  background: rgb(235, 233, 233);
+  position: relative;
+}
+
+.todo-app h1{
+  width: 100%;
+  text-align: center;
+  background: #232238;
+  color: #fff;
+  padding: 1rem 0;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+
+.todo-app input{
+  width: 90%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-inline: auto;
+  height: 2rem;
+  outline: none;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid rgb(204, 203, 203);
+}
+
+.todo-app input::placeholder{
+  text-align: center;
+  font-size: large;
+}
+
+.todo-app .task{
+  width: 95%;
+  margin-inline: auto;
+  border: 1px solid #232238;
+  height: 2rem;
+  display: grid;
+  grid-template-columns: 8fr 2fr;
+  align-items: center;
+  font-size: large;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+span{
+  padding-top: 5px;
+  background: #232238;
+  color: #fff;
+  height: 100%;
+  position: absolute;
+  cursor: pointer;
+  width: 3rem;
+  right: -3rem;
+  transition: .2s ease-in-out;
+}
+
+.todo-app .task:hover span{
+  right: 0;
+  transition: .2s ease-in-out;
+}
+.todo-app .main{
+  width: 95%;
+  margin-inline: auto;
+  height: 60%;
+  overflow:auto;
+  background: #fff;
+}
+
+.todo-app button{
+  position: absolute;
+  bottom: 1rem;
+  width: 90%;
+  background: #232238;
+  color: #fff;
+  left: 5%;
+  border: none;
+  height: 2rem;
+  cursor: pointer;
+}
+
+/*////////////////////////////////////////////////////////////Responsiveness/////////////////////////*/
+@media screen and (max-width: 1024px) {
+  .container{
+    width: 35%;
+    height: 85vh;
+  }
+  .todo-app{
+    width: 90%;
+    height: 95%;
+  }
+  .todo-app .main{
+    height: 58%;
+    padding: 2px 0;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .container{
+    width: 65%;
+    height: 90vh;
+  }
+  .todo-app{
+    width: 90%;
+    height: 95%;
+  }
+  span{
+    right: 0;
+  }
+  .todo-app .main{
+    height: 58%;
+    padding: 2px 0;
+  }
+
+}
+
+@media screen and (max-width: 425px) {
+  .container{
+    width: 80%;
+    height: 95vh;
+  }
+  .todo-app{
+    width: 95%;
+    height: 95%;
+  }
+  
+  span{
+    right: 0;
+  }
+  .todo-app .main{
+    height: 60%;
+    padding: 2px 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container{
+    width: 95%;
+    height: 95vh;
+  }
+  .todo-app{
+    width: 98%;
+    height: 98%;
+  }
+  span{
+    right: 0;
+  }
+  .todo-app .main{
+    height: 60%;
+    padding: 2px 0;
+  }
 }
