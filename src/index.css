@@ -87,6 +87,7 @@ span{
   width: 3rem;
   right: -3rem;
   transition: .2s ease-in-out;
+  top: 0;
 }
 
 .todo-app .task:hover span{
@@ -141,6 +142,7 @@ span{
   }
   span{
     right: 0;
+    top: 0;
   }
   .todo-app .main{
     height: 58%;
@@ -161,6 +163,7 @@ span{
   
   span{
     right: 0;
+    top: 0;
   }
   .todo-app .main{
     height: 60%;
@@ -179,6 +182,7 @@ span{
   }
   span{
     right: 0;
+    top: 0;
   }
   .todo-app .main{
     height: 60%;

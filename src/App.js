@@ -43,6 +43,7 @@ function App() {
             {toDoList.map((task,key)=>{
               return(<div className="task" key={key}>
                 <p>{task.newTask}</p>
+                <i class="fas fa-trash-alt deleteTask"></i>
                 <span onClick={()=>deleteTask(task.id)}>X</span>
               </div>)
             })}
