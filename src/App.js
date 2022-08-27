@@ -9,7 +9,7 @@ function App() {
 
   function addTask() {
 
-    if (newTask == "") {
+    if (newTask === "") {
       setValid("Invalid input")
     }else{
       setValid("")
